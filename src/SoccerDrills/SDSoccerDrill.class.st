@@ -44,3 +44,11 @@ SDSoccerDrill >> initialize [
 	super initialize.
 	currentStepNumber := 1
 ]
+
+{ #category : 'accessing' }
+SDSoccerDrill >> maxStepNumber [
+
+	^ self arcs
+		  ifNotEmpty: [ self arcs max: [ :arc | arc stepNumber ] ]
+		  ifEmpty: [ 0 ]
+]

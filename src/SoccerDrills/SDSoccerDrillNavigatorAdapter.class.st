@@ -42,9 +42,9 @@ SDSoccerDrillNavigatorAdapter >> hasMappingFor: anObject in: aModel [
 SDSoccerDrillNavigatorAdapter >> iconMapping [
 
 	^ {
-		  (SDSoccerDrill -> OPPetriNetsIcons petriNetIcon).
-		  (SDRunArc -> OPPetriNetsIcons arcIcon).
-		  (SDSoccerDrillBase -> OPPetriNetsIcons placeIcon) }
+		  (SDSoccerDrill -> SDSoccerDrillIcons ballForm).
+		  (SDRunArc -> SDSoccerDrillIcons runArcIcon).
+		  (SDSoccerDrillBase -> SDSoccerDrillIcons baseIcon) }
 ]
 
 { #category : 'private' }

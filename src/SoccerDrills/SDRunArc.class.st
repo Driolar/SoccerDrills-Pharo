@@ -8,9 +8,3 @@ Class {
 	#package : 'SoccerDrills',
 	#tag : 'Models'
 }
-
-{ #category : 'running' }
-SDRunArc >> run [
-
-	self target pushPlayer: self source pullPlayer
-]

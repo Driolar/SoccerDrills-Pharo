@@ -14,7 +14,8 @@ SDSoccerDrillPlugin >> diagramControllerClass [
 
 { #category : 'accessing' }
 SDSoccerDrillPlugin >> icon [
-	^ OPPetriNetsIcons petriNetIcon
+
+	^ SDSoccerDrillIcons ballForm
 ]
 
 { #category : 'accessing' }

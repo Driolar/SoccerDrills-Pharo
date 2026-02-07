@@ -44,6 +44,12 @@ SDSoccerDrillSimulatorTest >> setUp [
 ]
 
 { #category : 'tests' }
+SDSoccerDrillSimulatorTest >> testMaxStepNumber [
+
+	self assert: simulator model maxStepNumber equals: 2
+]
+
+{ #category : 'tests' }
 SDSoccerDrillSimulatorTest >> testStep [
 
 	self assert: simulator itemsForAction size equals: 1.

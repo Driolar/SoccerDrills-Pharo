@@ -18,6 +18,19 @@ SDSoccerDrillSimulator class >> initialClassMapping [
 		  yourself
 ]
 
+{ #category : 'initialization' }
+SDSoccerDrillSimulator >> initialize [
+
+	super initialize.
+	self delay: 5000
+]
+
+{ #category : 'testing' }
+SDSoccerDrillSimulator >> isSteppable [
+
+	^ self model currentStepNumber <= self model maxStepNumber
+]
+
 { #category : 'stepping' }
 SDSoccerDrillSimulator >> setDefaultStepping [
 	"sets default stepping settings"

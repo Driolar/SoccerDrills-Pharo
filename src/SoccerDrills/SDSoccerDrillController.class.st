@@ -36,9 +36,9 @@ SDSoccerDrillController >> initializePalette: aPalette [
 	aPalette
 		newCreationTool: 'Base'
 		factory: [ SDSoccerDrillBaseController new ]
-		icon: OPPetriNetsIcons placeIcon;
+		icon: SDSoccerDrillIcons baseIcon;
 		newSeparator;
 		newConnectionCreationTool: 'Run'
 		factory: [ SDRunArcController new ]
-		icon: OPPetriNetsIcons arcIcon
+		icon: SDSoccerDrillIcons runArcIcon
 ]
