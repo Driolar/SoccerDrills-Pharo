@@ -40,7 +40,9 @@ SDSoccerDrillsPresenter >> loadSimulation [
 	super loadSimulation.
 	diagramSimulator
 		when: OPSimulatorStepped
-		do: [ :event | self updateColors ]
+		do: [ :event |
+				self updateColors.
+				self startAnimations ]
 		for: self
 ]
 
@@ -52,6 +54,19 @@ SDSoccerDrillsPresenter >> simulatorClass [
 ]
 
 { #category : 'updating' }
+SDSoccerDrillsPresenter >> startAnimations [
+
+	diagramSimulator steppableElements do: [ :element |
+			| controller |
+			controller := self diagramController controllerForModel:
+				              element model.
+			self diagramController canvas addAnimation:
+				(controller diagramElement roassalAnimation
+					 duration: (Duration milliSeconds: self diagramSimulator delay);
+					 yourself) ]
+]
+
+{ #category : 'updating' }
 SDSoccerDrillsPresenter >> updateColors [
 
 	diagramSimulator simulableElements do: [ :element |
@@ -60,6 +75,6 @@ SDSoccerDrillsPresenter >> updateColors [
 				              element model.
 			controller diagramElement roassalShape color: (element isSteppable
 					 ifTrue: [ Color green ]
-					 ifFalse: [ Color black ]).
-			self diagramController canvas signalUpdate ]
+					 ifFalse: [ Color black ]) ].
+	self diagramController canvas signalUpdate
 ]

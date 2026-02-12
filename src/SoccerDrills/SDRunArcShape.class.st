@@ -34,3 +34,21 @@ SDRunArcShape >> renderBasicShape [
 		  to: self target roassalShape;
 		  yourself
 ]
+
+{ #category : 'rendering' }
+SDRunArcShape >> roassalAnimation [
+	"Answer the animation to be shown when I am stepped."
+
+	| movingShape |
+	movingShape := RSBox new.
+	self canvas add: movingShape.
+
+	^ RSTransitionAnimation new
+		  from: self source roassalShape position;
+		  to: self target roassalShape position;
+		  on: movingShape set: #position:;
+		  when: RSAnimationEndEvent
+		  do: [ :evt | movingShape remove ]
+		  for: self canvas;
+		  yourself
+]
