@@ -50,5 +50,5 @@ SDSoccerDrill >> maxStepNumber [
 
 	^ self arcs
 		  ifNotEmpty: [ self arcs max: [ :arc | arc stepNumber ] ]
-		  ifEmpty: [ 0 ]
+		  ifEmpty: [ self currentStepNumber ]
 ]

@@ -16,7 +16,7 @@ Class {
 SDSoccerDrillArc >> initialize [
 
 	super initialize.
-	stepNumber := 0
+	stepNumber := 1
 ]
 
 { #category : 'testing' }
