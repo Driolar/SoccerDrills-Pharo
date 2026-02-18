@@ -19,18 +19,18 @@ SDSoccerDrillsPresenter class >> toolbarMenu: aBuilder [
 { #category : 'private - hooks' }
 SDSoccerDrillsPresenter >> buttonItems [
 
-	^ super buttonItems
-		  add: (self newButton
+	^ OrderedCollection
+		  with: (self newButton
 				   label: 'Play';
 				   iconName: #go;
-				   help: 'Steps every five seconds';
-				   action: [ self diagramSimulator repeat ]);
-		  add: (self newButton
+				   help: 'Steps every five seconds until drill end.';
+				   action: [ self diagramSimulator repeat ])
+		  with: (self newButton
 				   label: 'Stop';
 				   iconName: #stop;
-				   help: 'Stops the simulation';
-				   action: [ self diagramSimulator stop ]);
-		  yourself
+				   help:
+					   'Stops the simulation after current step and resets to the drill start.';
+				   action: [ self diagramSimulator stop ])
 ]
 
 { #category : 'private - hooks' }
@@ -39,11 +39,29 @@ SDSoccerDrillsPresenter >> loadSimulation [
 
 	super loadSimulation.
 	diagramSimulator
-		when: OPSimulatorStepped
-		do: [ :event |
+		when: OPSimulatorStepped do: [ :event |
 				self updateColors.
 				self startAnimations ]
-		for: self
+		for: self;
+		when: OPSimulatorStoppedRun do: [ :event | self reset ] for: self
+]
+
+{ #category : 'updating' }
+SDSoccerDrillsPresenter >> reset [
+
+	diagramSimulator resetStepNumber.
+	self resetColors
+]
+
+{ #category : 'updating' }
+SDSoccerDrillsPresenter >> resetColors [
+
+	diagramSimulator simulableElements do: [ :element |
+			| controller |
+			controller := self diagramController controllerForModel:
+				              element model.
+			controller diagramElement roassalShape color: Color black ].
+	self diagramController canvas signalUpdate
 ]
 
 { #category : 'private - hooks' }

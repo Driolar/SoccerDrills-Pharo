@@ -31,6 +31,12 @@ SDSoccerDrillSimulator >> isSteppable [
 	^ self model currentStepNumber <= self model maxStepNumber
 ]
 
+{ #category : 'actions' }
+SDSoccerDrillSimulator >> resetStepNumber [
+
+	self model resetStepNumber
+]
+
 { #category : 'stepping' }
 SDSoccerDrillSimulator >> setDefaultStepping [
 	"sets default stepping settings"

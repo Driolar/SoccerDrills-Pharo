@@ -50,6 +50,15 @@ SDSoccerDrillSimulatorTest >> testMaxStepNumber [
 ]
 
 { #category : 'tests' }
+SDSoccerDrillSimulatorTest >> testResetStepNumber [
+
+	simulator step.
+	self assert: simulator model currentStepNumber equals: 2.
+	simulator resetStepNumber.
+	self assert: simulator model currentStepNumber equals: 1
+]
+
+{ #category : 'tests' }
 SDSoccerDrillSimulatorTest >> testStep [
 
 	self assert: simulator itemsForAction size equals: 1.

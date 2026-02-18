@@ -42,7 +42,7 @@ SDSoccerDrill >> incrementStepNumber [
 SDSoccerDrill >> initialize [
 
 	super initialize.
-	currentStepNumber := 1
+	self resetStepNumber
 ]
 
 { #category : 'accessing' }
@@ -51,4 +51,10 @@ SDSoccerDrill >> maxStepNumber [
 	^ self arcs
 		  ifNotEmpty: [ self arcs max: [ :arc | arc stepNumber ] ]
 		  ifEmpty: [ self currentStepNumber ]
+]
+
+{ #category : 'api' }
+SDSoccerDrill >> resetStepNumber [
+
+	currentStepNumber := 1
 ]
