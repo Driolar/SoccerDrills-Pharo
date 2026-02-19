@@ -91,6 +91,37 @@ SDSoccerDrillIcons class >> baseIcon [
 ]
 
 { #category : 'api' }
+SDSoccerDrillIcons class >> dribblingArcIcon [
+
+	^ self arcIconOn: (RSLine new
+			   startPoint: 0 @ 0;
+			   endPoint: 29 @ 0;
+			   format: '.';
+			   borderWidth: 2)
+]
+
+{ #category : 'api' }
+SDSoccerDrillIcons class >> goalIcon [
+
+	| c |
+	c := RSCanvas new.
+	c color: Color transparent.
+	c add: (RSBox new extent: 16 asPoint).
+	c extent: 16 asPoint.
+	c zoomToFit.
+	^ c asForm
+]
+
+{ #category : 'api' }
+SDSoccerDrillIcons class >> passArcIcon [
+
+	^ self arcIconOn: (RSLine new
+			   startPoint: 0 @ 0;
+			   endPoint: 29 @ 0;
+			   borderWidth: 2)
+]
+
+{ #category : 'api' }
 SDSoccerDrillIcons class >> runArcIcon [
 
 	^ self arcIconOn: (RSLine new
@@ -98,4 +129,13 @@ SDSoccerDrillIcons class >> runArcIcon [
 			   endPoint: 29 @ 0;
 			   dashed;
 			   "dashed;format: '.';"borderWidth: 2)
+]
+
+{ #category : 'api' }
+SDSoccerDrillIcons class >> shotArcIcon [
+
+	^ self arcIconOn: (RSLine new
+			   startPoint: 0 @ 0;
+			   endPoint: 29 @ 0;
+			   borderWidth: 4)
 ]

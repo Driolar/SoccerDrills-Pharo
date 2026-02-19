@@ -13,7 +13,7 @@ Class {
 SDSoccerDrillController >> canBeTargetFor: aController [
 
 	^ (super canBeTargetFor: aController) or: [
-		  aController isKindOf: SDSoccerDrillBaseController ]
+		  aController isKindOf: SDSoccerDrillNodeController ]
 ]
 
 { #category : 'accessing' }
@@ -21,7 +21,11 @@ SDSoccerDrillController >> controllerFactory [
 
 	^ super controllerFactory
 		  register: SDRunArcController forModel: SDRunArc;
-		  register: SDSoccerDrillBaseController forModel: SDSoccerDrillBase
+		  register: SDDribblingArcController forModel: SDDribblingArc;
+		  register: SDPassArcController forModel: SDPassArc;
+		  register: SDShotArcController forModel: SDShotArc;
+		  register: SDSoccerDrillBaseController forModel: SDSoccerDrillBase;
+		  register: SDSoccerDrillGoalController forModel: SDSoccerDrillGoal
 ]
 
 { #category : 'accessing' }
@@ -37,8 +41,20 @@ SDSoccerDrillController >> initializePalette: aPalette [
 		newCreationTool: 'Base'
 		factory: [ SDSoccerDrillBaseController new ]
 		icon: SDSoccerDrillIcons baseIcon;
+		newCreationTool: 'Goal'
+		factory: [ SDSoccerDrillGoalController new ]
+		icon: SDSoccerDrillIcons goalIcon;
 		newSeparator;
 		newConnectionCreationTool: 'Run'
 		factory: [ SDRunArcController new ]
-		icon: SDSoccerDrillIcons runArcIcon
+		icon: SDSoccerDrillIcons runArcIcon;
+		newConnectionCreationTool: 'Dribbling'
+		factory: [ SDDribblingArcController new ]
+		icon: SDSoccerDrillIcons dribblingArcIcon;
+		newConnectionCreationTool: 'Pass'
+		factory: [ SDPassArcController new ]
+		icon: SDSoccerDrillIcons passArcIcon;
+		newConnectionCreationTool: 'Shot'
+		factory: [ SDShotArcController new ]
+		icon: SDSoccerDrillIcons shotArcIcon
 ]

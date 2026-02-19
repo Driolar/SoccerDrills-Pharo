@@ -40,8 +40,3 @@ SDSoccerDrillPlugin >> modelSerializerClass [
 SDSoccerDrillPlugin >> name [
 	^ 'Soccer Drill'
 ]
-
-{ #category : 'testing' }
-SDSoccerDrillPlugin >> supportsHidingElements [
-	^ true
-]

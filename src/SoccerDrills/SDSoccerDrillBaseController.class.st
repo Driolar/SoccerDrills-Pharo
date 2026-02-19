@@ -3,7 +3,7 @@ I am the controller for SDSoccerDrillBase.
 "
 Class {
 	#name : 'SDSoccerDrillBaseController',
-	#superclass : 'OPElementController',
+	#superclass : 'SDSoccerDrillNodeController',
 	#category : 'SoccerDrills-Controllers',
 	#package : 'SoccerDrills',
 	#tag : 'Controllers'
@@ -12,20 +12,14 @@ Class {
 { #category : 'connecting' }
 SDSoccerDrillBaseController >> canBeSourceFor: aController [
 
-	^ aController isKindOf: SDRunArcController
+	^ aController isKindOf: SDSoccerDrillArcController
 ]
 
-{ #category : 'nil' }
+{ #category : 'connecting' }
 SDSoccerDrillBaseController >> canBeTargetFor: aController [
 
-	^ (aController isKindOf: SDRunArcController) and: [
+	^ (aController isKindOf: SDSoccerDrillArcController) and: [
 		  aController source model ~= self model ]
-]
-
-{ #category : 'accessing' }
-SDSoccerDrillBaseController >> dependentElements [
-
-	^ self model connected
 ]
 
 { #category : 'construction' }
@@ -38,11 +32,4 @@ SDSoccerDrillBaseController >> diagramElementClass [
 SDSoccerDrillBaseController >> modelClass [
 
 	^ SDSoccerDrillBase
-]
-
-{ #category : 'destruction' }
-SDSoccerDrillBaseController >> removeModel [
-
-	self diagramController model remove: self model.
-	super removeModel
 ]

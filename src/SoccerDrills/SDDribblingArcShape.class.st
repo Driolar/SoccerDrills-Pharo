@@ -1,5 +1,5 @@
 Class {
-	#name : 'SDRunArcShape',
+	#name : 'SDDribblingArcShape',
 	#superclass : 'SDSoccerDrillArcShape',
 	#category : 'SoccerDrills-DiagramElements',
 	#package : 'SoccerDrills',
@@ -7,15 +7,18 @@ Class {
 }
 
 { #category : 'rendering' }
-SDRunArcShape >> newMovingShape [
+SDDribblingArcShape >> newMovingShape [
 
-	^ RSBox new
+	^ RSComposite new
+		  add: RSBox new;
+		  add: (RSCircle new color: Color black);
+		  yourself
 ]
 
 { #category : 'rendering' }
-SDRunArcShape >> renderBasicShape [
+SDDribblingArcShape >> renderBasicShape [
 
 	^ super renderBasicShape
-		  dashed;
+		  format: '.';
 		  yourself
 ]

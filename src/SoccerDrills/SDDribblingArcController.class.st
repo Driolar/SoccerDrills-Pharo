@@ -1,8 +1,8 @@
 "
-I am the controller for SDRunArc.
+I am the controller for SDDribblingArc.
 "
 Class {
-	#name : 'SDRunArcController',
+	#name : 'SDDribblingArcController',
 	#superclass : 'SDSoccerDrillArcController',
 	#category : 'SoccerDrills-Controllers',
 	#package : 'SoccerDrills',
@@ -10,13 +10,13 @@ Class {
 }
 
 { #category : 'construction' }
-SDRunArcController >> diagramElementClass [
+SDDribblingArcController >> diagramElementClass [
 
-	^ SDRunArcShape
+	^ SDDribblingArcShape
 ]
 
 { #category : 'accessing' }
-SDRunArcController >> modelClass [
+SDDribblingArcController >> modelClass [
 
-	^ SDRunArc
+	^ SDDribblingArc
 ]

@@ -14,7 +14,11 @@ SDSoccerDrillSimulator class >> initialClassMapping [
 
 	^ super initialClassMapping
 		  at: SDRunArc put: SDRunArcSimulator;
+		  at: SDPassArc put: SDPassArcSimulator;
+		  at: SDDribblingArc put: SDDribblingArcSimulator;
+		  at: SDShotArc put: SDShotArcSimulator;
 		  at: SDSoccerDrillBase put: SDSoccerDrillBaseSimulator;
+		  at: SDSoccerDrillGoal put: SDSoccerDrillGoalSimulator;
 		  yourself
 ]
 

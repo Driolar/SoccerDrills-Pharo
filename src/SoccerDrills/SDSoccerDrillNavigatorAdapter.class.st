@@ -16,8 +16,8 @@ SDSoccerDrillNavigatorAdapter class >> priority [
 SDSoccerDrillNavigatorAdapter >> childrenMapping [
 
 	^ {
-		  (SDSoccerDrill -> #bases).
-		  (SDSoccerDrillBase -> #connected) }
+		  (SDSoccerDrill -> #nodes).
+		  (SDSoccerDrillNode -> #connected) }
 ]
 
 { #category : 'widget API' }
@@ -26,7 +26,11 @@ SDSoccerDrillNavigatorAdapter >> displayMapping [
 	^ {
 		  (SDSoccerDrill -> 'Model').
 		  (SDRunArc -> 'Run Arc').
-		  (SDSoccerDrillBase -> 'Base') }
+		  (SDDribblingArc -> 'Dribbling Arc').
+		  (SDPassArc -> 'Pass Arc').
+		  (SDShotArc -> 'Shot Arc').
+		  (SDSoccerDrillBase -> 'Base').
+		  (SDSoccerDrillGoal -> 'Goal') }
 ]
 
 { #category : 'testing' }
@@ -35,7 +39,11 @@ SDSoccerDrillNavigatorAdapter >> hasMappingFor: anObject in: aModel [
 	^ {
 		  SDSoccerDrill.
 		  SDRunArc.
-		  SDSoccerDrillBase } anySatisfy: [ :any | anObject isKindOf: any ]
+		  SDDribblingArc.
+		  SDPassArc.
+		  SDShotArc.
+		  SDSoccerDrillBase.
+		  SDSoccerDrillGoal } anySatisfy: [ :any | anObject isKindOf: any ]
 ]
 
 { #category : 'widget API' }
@@ -44,7 +52,11 @@ SDSoccerDrillNavigatorAdapter >> iconMapping [
 	^ {
 		  (SDSoccerDrill -> SDSoccerDrillIcons ballForm).
 		  (SDRunArc -> SDSoccerDrillIcons runArcIcon).
-		  (SDSoccerDrillBase -> SDSoccerDrillIcons baseIcon) }
+		  (SDPassArc -> SDSoccerDrillIcons passArcIcon).
+		  (SDDribblingArc -> SDSoccerDrillIcons dribblingArcIcon).
+		  (SDShotArc -> SDSoccerDrillIcons shotArcIcon).
+		  (SDSoccerDrillBase -> SDSoccerDrillIcons baseIcon).
+		  (SDSoccerDrillGoal -> SDSoccerDrillIcons goalIcon) }
 ]
 
 { #category : 'private' }
@@ -59,6 +71,6 @@ SDSoccerDrillNavigatorAdapter >> typesByDependency [
 
 	^ {
 		  SDSoccerDrill.
-		  SDSoccerDrillBase.
-		  SDRunArc }
+		  SDSoccerDrillNode.
+		  SDSoccerDrillArc }
 ]

@@ -1,8 +1,8 @@
 "
-I am a soccer drill base where players and/or balls come and go.
+I am a soccer drill goal towards balls are shot.
 "
 Class {
-	#name : 'SDSoccerDrillBase',
+	#name : 'SDSoccerDrillGoal',
 	#superclass : 'SDSoccerDrillNode',
 	#category : 'SoccerDrills-Models',
 	#package : 'SoccerDrills',

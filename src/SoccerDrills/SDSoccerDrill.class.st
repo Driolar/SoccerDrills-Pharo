@@ -21,12 +21,6 @@ SDSoccerDrill >> arcs [
 ]
 
 { #category : 'accessing' }
-SDSoccerDrill >> bases [
-
-	^ elements select: #isBase
-]
-
-{ #category : 'accessing' }
 SDSoccerDrill >> currentStepNumber [
 
 	^ currentStepNumber
@@ -51,6 +45,12 @@ SDSoccerDrill >> maxStepNumber [
 	^ self arcs
 		  ifNotEmpty: [ self arcs max: [ :arc | arc stepNumber ] ]
 		  ifEmpty: [ self currentStepNumber ]
+]
+
+{ #category : 'accessing' }
+SDSoccerDrill >> nodes [
+
+	^ elements select: #isNode
 ]
 
 { #category : 'api' }

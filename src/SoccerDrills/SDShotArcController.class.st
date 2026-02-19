@@ -2,7 +2,7 @@
 I am the controller for SDRunArc.
 "
 Class {
-	#name : 'SDRunArcController',
+	#name : 'SDShotArcController',
 	#superclass : 'SDSoccerDrillArcController',
 	#category : 'SoccerDrills-Controllers',
 	#package : 'SoccerDrills',
@@ -10,13 +10,13 @@ Class {
 }
 
 { #category : 'construction' }
-SDRunArcController >> diagramElementClass [
+SDShotArcController >> diagramElementClass [
 
-	^ SDRunArcShape
+	^ SDShotArcShape
 ]
 
 { #category : 'accessing' }
-SDRunArcController >> modelClass [
+SDShotArcController >> modelClass [
 
-	^ SDRunArc
+	^ SDShotArc
 ]

@@ -1,5 +1,5 @@
 Class {
-	#name : 'SDDribblingArcSimulator',
+	#name : 'SDShotArcSimulator',
 	#superclass : 'SDSoccerDrillArcSimulator',
 	#category : 'SoccerDrills-Simulation',
 	#package : 'SoccerDrills',

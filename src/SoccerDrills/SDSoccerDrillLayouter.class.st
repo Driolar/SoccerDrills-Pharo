@@ -10,7 +10,7 @@ Class {
 SDSoccerDrillLayouter >> allEdges [
 
 	^ diagramController controllers
-		  select: [ :ctrl | ctrl isKindOf: SDRunArcController ]
+		  select: [ :ctrl | ctrl isKindOf: SDSoccerDrillArcController ]
 		  thenCollect: #roassalShape
 ]
 
@@ -18,7 +18,7 @@ SDSoccerDrillLayouter >> allEdges [
 SDSoccerDrillLayouter >> allNodes [
 
 	^ diagramController controllers
-		  select: [ :ctrl | ctrl isKindOf: SDSoccerDrillBaseController ]
+		  select: [ :ctrl | ctrl isKindOf: SDSoccerDrillNodeController ]
 		  thenCollect: #roassalShape
 ]
 

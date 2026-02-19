@@ -1,6 +1,6 @@
 Class {
 	#name : 'SDPassArcSimulator',
-	#superclass : 'OPEdgeSimulator',
+	#superclass : 'SDSoccerDrillArcSimulator',
 	#category : 'SoccerDrills-Simulation',
 	#package : 'SoccerDrills',
 	#tag : 'Simulation'

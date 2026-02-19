@@ -1,5 +1,5 @@
 Class {
-	#name : 'SDRunArcNameShape',
+	#name : 'SDSoccerDrillArcNameShape',
 	#superclass : 'OPEdgeLabel',
 	#category : 'SoccerDrills-DiagramElements',
 	#package : 'SoccerDrills',
@@ -7,19 +7,19 @@ Class {
 }
 
 { #category : 'adding' }
-SDRunArcNameShape >> defaultAnchorConstraintPosition [
+SDSoccerDrillArcNameShape >> defaultAnchorConstraintPosition [
 
 	^ OPRSAnchorConstraintBalanceReference balance: 0.3
 ]
 
 { #category : 'adding' }
-SDRunArcNameShape >> defaultMinDistance [
+SDSoccerDrillArcNameShape >> defaultMinDistance [
 
 	^ 5
 ]
 
 { #category : 'accessing' }
-SDRunArcNameShape >> defaultText [
+SDSoccerDrillArcNameShape >> defaultText [
 
 	^ self modelElement stepNumber
 ]

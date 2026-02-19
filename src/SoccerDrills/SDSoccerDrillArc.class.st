@@ -26,7 +26,7 @@ SDSoccerDrillArc >> isArc [
 ]
 
 { #category : 'testing' }
-SDSoccerDrillArc >> isBase [
+SDSoccerDrillArc >> isNode [
 
 	^ false
 ]
