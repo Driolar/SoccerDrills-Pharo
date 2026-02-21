@@ -1,3 +1,6 @@
+"
+I am the player run arc shape.
+"
 Class {
 	#name : 'SDRunArcShape',
 	#superclass : 'SDSoccerDrillArcShape',

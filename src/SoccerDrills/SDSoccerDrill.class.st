@@ -1,7 +1,9 @@
 "
 I am a Soccer Drill model.
 
-I connect SDSoccerDrillBases by SDSoccerDrillPaths.
+My nodes (subclasses of SDSoccerDrillNode) are connected by arcs (subclasses of SDSoccerDrillArc).
+
+I manage the current drill step number. 
 "
 Class {
 	#name : 'SDSoccerDrill',

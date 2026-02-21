@@ -1,3 +1,6 @@
+"
+I am the simulator for SDSoccerDrillBase.
+"
 Class {
 	#name : 'SDSoccerDrillBaseSimulator',
 	#superclass : 'OPElementSimulator',

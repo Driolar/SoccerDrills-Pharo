@@ -1,3 +1,6 @@
+"
+I am the abstract arc shape.
+"
 Class {
 	#name : 'SDSoccerDrillArcShape',
 	#superclass : 'OPEdge',

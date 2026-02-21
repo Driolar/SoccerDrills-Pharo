@@ -1,3 +1,6 @@
+"
+I am the simulator for SDDribblingArc.
+"
 Class {
 	#name : 'SDDribblingArcSimulator',
 	#superclass : 'SDSoccerDrillArcSimulator',

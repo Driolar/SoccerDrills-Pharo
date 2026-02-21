@@ -1,5 +1,5 @@
 "
-I am a ball pass between two drill bases.
+I represent a pass between two SDSoccerDrillBases.
 "
 Class {
 	#name : 'SDPassArc',

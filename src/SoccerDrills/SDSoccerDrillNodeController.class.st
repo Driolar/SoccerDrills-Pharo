@@ -1,3 +1,6 @@
+"
+I am the controller for SDSoccerDrillNode.
+"
 Class {
 	#name : 'SDSoccerDrillNodeController',
 	#superclass : 'OPElementController',

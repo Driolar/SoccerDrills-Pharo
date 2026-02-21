@@ -1,3 +1,6 @@
+"
+I am the arc label showing the step number.
+"
 Class {
 	#name : 'SDSoccerDrillArcNameShape',
 	#superclass : 'OPEdgeLabel',

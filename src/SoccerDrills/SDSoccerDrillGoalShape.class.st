@@ -1,5 +1,5 @@
 "
-I am the basic shape for SDSoccerDrillBase.
+I am the basic shape for SDSoccerDrillGoal.
 "
 Class {
 	#name : 'SDSoccerDrillGoalShape',

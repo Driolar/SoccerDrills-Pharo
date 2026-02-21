@@ -1,3 +1,6 @@
+"
+I am the pass arc shape.
+"
 Class {
 	#name : 'SDPassArcShape',
 	#superclass : 'SDSoccerDrillArcShape',

@@ -1,5 +1,5 @@
 "
-I am the controller for SDRunArc.
+I am the controller for SDShotArc.
 "
 Class {
 	#name : 'SDShotArcController',

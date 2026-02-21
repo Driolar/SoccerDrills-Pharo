@@ -1,5 +1,5 @@
 "
-I am a dribbling between two drill bases.
+I represent a dribbling between two SDSoccerDrillBases.
 "
 Class {
 	#name : 'SDDribblingArc',

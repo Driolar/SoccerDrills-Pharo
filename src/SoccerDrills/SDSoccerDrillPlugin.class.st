@@ -1,3 +1,6 @@
+"
+I customize OPPlugin for soccer drills.
+"
 Class {
 	#name : 'SDSoccerDrillPlugin',
 	#superclass : 'OPPlugin',

@@ -1,3 +1,6 @@
+"
+I am the simulator for SDShotArc.
+"
 Class {
 	#name : 'SDShotArcSimulator',
 	#superclass : 'SDSoccerDrillArcSimulator',

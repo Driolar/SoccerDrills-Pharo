@@ -1,5 +1,5 @@
 "
-I am a player run between two drill bases.
+I represent a player run between two SDSoccerDrillBases.
 "
 Class {
 	#name : 'SDRunArc',

@@ -1,3 +1,6 @@
+"
+I provide the soccer drill icons.
+"
 Class {
 	#name : 'SDSoccerDrillIcons',
 	#superclass : 'Object',

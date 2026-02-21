@@ -1,3 +1,6 @@
+"
+I customize OPNavigatorAdapter for soccer drills.
+"
 Class {
 	#name : 'SDSoccerDrillNavigatorAdapter',
 	#superclass : 'OPNavigatorAdapter',

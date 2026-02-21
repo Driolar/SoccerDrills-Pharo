@@ -1,3 +1,6 @@
+"
+I provide Soccer Drill Examples.
+"
 Class {
 	#name : 'SDSoccerDrillExamples',
 	#superclass : 'Object',

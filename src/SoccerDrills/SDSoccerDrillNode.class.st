@@ -1,3 +1,6 @@
+"
+I represent a soccer drill node (base or goal).
+"
 Class {
 	#name : 'SDSoccerDrillNode',
 	#superclass : 'OPModelObject',

@@ -1,3 +1,6 @@
+"
+I am the controller for SDSoccerDrillArc.
+"
 Class {
 	#name : 'SDSoccerDrillArcController',
 	#superclass : 'OPDirectionalRelationshipController',

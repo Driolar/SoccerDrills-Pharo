@@ -1,5 +1,5 @@
 "
-I connect to SDSoccerDrillBases.
+I am an arc (a path) that connects to SDSoccerDrillNodes.
 "
 Class {
 	#name : 'SDSoccerDrillArc',

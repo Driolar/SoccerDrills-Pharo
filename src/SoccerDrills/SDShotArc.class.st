@@ -1,5 +1,5 @@
 "
-I am a shot from a drill base.
+I represent a shot from a SDSoccerDrillBase to a SDSoccerDrillGoal.
 "
 Class {
 	#name : 'SDShotArc',

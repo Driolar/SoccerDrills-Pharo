@@ -1,3 +1,6 @@
+"
+I costumize OPLayouter for Soccer Drills.
+"
 Class {
 	#name : 'SDSoccerDrillLayouter',
 	#superclass : 'OPLayouter',
