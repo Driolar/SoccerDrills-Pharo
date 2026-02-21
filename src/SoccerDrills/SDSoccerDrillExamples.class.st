@@ -50,7 +50,7 @@ SDSoccerDrillExamples class >> menuCommandOn: aBuilder [
 
 	<worldMenu>
 	((aBuilder item: #DrillEditor) icon: SDSoccerDrillIcons ballForm)
-		label: 'Soccer Drills Editor';
+		label: 'Soccer Drills';
 		order: 225;
 		parent: #MostUsedTools;
 		action: [ self openExampleEmptyModel ];
