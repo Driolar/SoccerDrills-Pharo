@@ -38,12 +38,8 @@ SDSoccerDrillNavigatorAdapter >> hasMappingFor: anObject in: aModel [
 
 	^ {
 		  SDSoccerDrill.
-		  SDRunArc.
-		  SDDribblingArc.
-		  SDPassArc.
-		  SDShotArc.
-		  SDSoccerDrillBase.
-		  SDSoccerDrillGoal } anySatisfy: [ :any | anObject isKindOf: any ]
+		  SDSoccerDrillArc.
+		  SDSoccerDrillNode } anySatisfy: [ :any | anObject isKindOf: any ]
 ]
 
 { #category : 'widget API' }
