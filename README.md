@@ -8,10 +8,10 @@ Metacello new
         repository: 'github://Driolar/SoccerDrills-Pharo:master/src';
         load
 ```
-## Start the Soccer Drills Editor
-Start the Soccer Drills Editor either
+## Start the Soccer Drills Workbench
+Start the Soccer Drills Workbench either
 - sending a `SDSoccerDrillExamples` class side message or
-- using the menu command `Soccer Drills Editor` in the world menu.
+- using the menu command `Soccer Drills` in the world menu.
 
-This is the editor's appearance:
+This is the workbench's appearance:
 <img width="1530" height="814" alt="image" src="https://github.com/user-attachments/assets/89b20b42-00d3-4ce9-8419-1419f8e0cc10" />
