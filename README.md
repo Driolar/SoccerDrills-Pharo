@@ -15,3 +15,5 @@ Start the Soccer Drills Workbench either
 
 This is the workbench's appearance:
 <img width="1530" height="814" alt="image" src="https://github.com/user-attachments/assets/89b20b42-00d3-4ce9-8419-1419f8e0cc10" />
+
+There is some [user documentation](https://github.com/Driolar/SoccerDrills-Pharo/tree/master/doc) written for you.
