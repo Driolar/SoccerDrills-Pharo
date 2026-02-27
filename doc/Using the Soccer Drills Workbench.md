@@ -28,6 +28,8 @@ There are following arc classes:
 
 - A **shot arc** represents by a *thick solid* line a ball shot from a base to a goal.
 
+After having inserted an arc (as a simple straight line), you can add (polyline) segments to it by moving the  *control points* shown in the middle of each segment.
+
 ## Editing
 
 The drill nodes can be singly rearranged as desired. There are also zooming, fitting and layout features available. The arc labels (step number) can also be singly repositioned.
@@ -41,6 +43,8 @@ In case you want to cancel adding an arc after you have selected the source but 
 By choosing the *Simulation* option in the *Diagram* menu, a small window containing the two buttons *Play* and *Stop* is opened. The **stepping** delay is five seconds.
 
 During the delay, the arcs having the current step number are colored green and let slide an **animation** icon from source to target node. For pass and shot arcs, the animation icon is a black circle symbolizing a ball. For run arcs, the icon is a grey square symbolizing a player. Finally, for dribbling arcs, the icon is a grey square containing a black circle.
+
+There is an animation **variant**: by checking for the selected arc *"movement along control points"* in the *Properties* form, the animation icon will move along the control points instead of straightly from source to target node.
 
 ## Persistence
 
