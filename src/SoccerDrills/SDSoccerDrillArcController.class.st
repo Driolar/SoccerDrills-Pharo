@@ -20,7 +20,12 @@ SDSoccerDrillArcController >> buildEditorForm: aForm [
 		number: self model stepNumber;
 		whenNumberChangedDo: [ :newValue |
 				self model stepNumber: newValue.
-				self modelChanged ]
+				self modelChanged ].
+	aForm addSeparator.
+	(aForm addCheckbox: 'movement along control points')
+		state: self model isMovementAlongControlPoints;
+		whenChangedDo: [ :newValue |
+			self model isMovementAlongControlPoints: newValue ]
 ]
 
 { #category : 'construction' }

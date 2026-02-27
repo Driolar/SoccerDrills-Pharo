@@ -79,9 +79,8 @@ SDSoccerDrillsPresenter >> startAnimations [
 			controller := self diagramController controllerForModel:
 				              element model.
 			self diagramController canvas addAnimation:
-				(controller diagramElement roassalAnimation
-					 duration: (Duration milliSeconds: self diagramSimulator delay);
-					 yourself) ]
+				(controller diagramElement roassalAnimationWithDuration:
+					 (Duration milliSeconds: self diagramSimulator delay)) ]
 ]
 
 { #category : 'updating' }

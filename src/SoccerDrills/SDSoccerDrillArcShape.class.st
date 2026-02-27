@@ -1,9 +1,14 @@
 "
 I am the abstract arc shape.
+
+I care for movement animation either from source to target or along the control points.
 "
 Class {
 	#name : 'SDSoccerDrillArcShape',
 	#superclass : 'OPEdge',
+	#instVars : [
+		'movingShape'
+	],
 	#category : 'SoccerDrills-DiagramElements',
 	#package : 'SoccerDrills',
 	#tag : 'DiagramElements'
@@ -20,6 +25,41 @@ SDSoccerDrillArcShape >> createOwnedElementsWithoutController [
 SDSoccerDrillArcShape >> headMarker [
 
 	^ OPRSMarkerBuilder arrow
+]
+
+{ #category : 'initialization' }
+SDSoccerDrillArcShape >> initialize [
+
+	super initialize.
+	movingShape := self newMovingShape
+]
+
+{ #category : 'rendering' }
+SDSoccerDrillArcShape >> newAnimationAlongControlPointsWithDuration: aDuration [
+	"Answer the animation where moving shape moves along the control points."
+
+	| animation |
+	animation := RSSequentialAnimation new.
+	roassalShape controlPoints overlappingPairsDo: [ :from :to |
+			animation add: (RSTransitionAnimation new
+					 from: from;
+					 to: to;
+					 on: movingShape set: #position:;
+					 duration: aDuration / (roassalShape controlPoints size - 1);
+					 yourself) ].
+	^ animation
+]
+
+{ #category : 'rendering' }
+SDSoccerDrillArcShape >> newAnimationSourceToTargetWithDuration: aDuration [
+	"Answer the animation where moving shape moves straight from source to target."
+
+	^ RSTransitionAnimation new
+		  from: self source roassalShape position;
+		  to: self target roassalShape position;
+		  on: movingShape set: #position:;
+		  duration: aDuration;
+		  yourself
 ]
 
 { #category : 'rendering' }
@@ -44,17 +84,18 @@ SDSoccerDrillArcShape >> renderBasicShape [
 ]
 
 { #category : 'rendering' }
-SDSoccerDrillArcShape >> roassalAnimation [
+SDSoccerDrillArcShape >> roassalAnimationWithDuration: aDuration [
 	"Answer the animation to be shown when I am stepped."
 
-	| movingShape |
-	movingShape := self newMovingShape.
+	| animation |
 	self canvas add: movingShape.
-
-	^ RSTransitionAnimation new
-		  from: self source roassalShape position;
-		  to: self target roassalShape position;
-		  on: movingShape set: #position:;
+	animation := self modelElement isMovementAlongControlPoints
+		             ifTrue: [
+		             self newAnimationAlongControlPointsWithDuration:
+			             aDuration ]
+		             ifFalse: [
+		             self newAnimationSourceToTargetWithDuration: aDuration ].
+	^ animation
 		  when: RSAnimationEndEvent
 		  do: [ :evt | movingShape remove ]
 		  for: self canvas;

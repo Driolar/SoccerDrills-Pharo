@@ -5,7 +5,8 @@ Class {
 	#name : 'SDSoccerDrillArc',
 	#superclass : 'OPDirectedAssociation',
 	#instVars : [
-		'stepNumber'
+		'stepNumber',
+		'isMovementAlongControlPoints'
 	],
 	#category : 'SoccerDrills-Models',
 	#package : 'SoccerDrills',
@@ -16,13 +17,26 @@ Class {
 SDSoccerDrillArc >> initialize [
 
 	super initialize.
-	stepNumber := 1
+	stepNumber := 1.
+	isMovementAlongControlPoints := false
 ]
 
 { #category : 'testing' }
 SDSoccerDrillArc >> isArc [
 
 	^ true
+]
+
+{ #category : 'accessing' }
+SDSoccerDrillArc >> isMovementAlongControlPoints [
+
+	^ isMovementAlongControlPoints
+]
+
+{ #category : 'accessing' }
+SDSoccerDrillArc >> isMovementAlongControlPoints: anObject [
+
+	isMovementAlongControlPoints := anObject
 ]
 
 { #category : 'testing' }
